@@ -9,6 +9,7 @@ const { check, validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const User = require('./models/user');
+const path = require('path');
 const app = express();
 
 // Middleware
@@ -327,14 +328,13 @@ app.get('/referral-code', auth, async (req, res) => {
   });
 
 
-  // Serve static files from the React build directory
+// Serve static files from the React build directory
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Handle requests to root URL by serving the index.html file
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-
   
   
 // Start Server
