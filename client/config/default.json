@@ -1,0 +1,7 @@
+
+
+{
+    "mongoURI": "mongodb+srv://ParthiGMR:Parthiban7548@parthibangmr.1quwer2.mongodb.net/empmonit",
+    "jwtSecret": "hello"
+  }
+  
